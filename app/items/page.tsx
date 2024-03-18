@@ -2,12 +2,12 @@
 import { CardItem } from "@/components/CardItem";
 import { getProducts } from "@/utils/supabase"
 import { Products } from "@/utils/types";
+import { useEffect, useRef, useState } from "react"
 import { useSearchParams } from 'next/navigation'
-import { Suspense, useEffect, useRef, useState } from "react"
 
 export default function Items() {
     const searchParams = useSearchParams()
-    const categoryId = searchParams.get('category') || null;
+    const categoryId = searchParams.has('category') ? searchParams.get('category') : null;
 
     const pageLimit = 8;
     const [products, setProducts] = useState<Products[]>([]);
@@ -27,7 +27,7 @@ export default function Items() {
     };
 
     useEffect(() => {
-        console.log('categoryId: ' + categoryId);
+        //console.log('categoryId: ' + categoryId);
         const observer = new IntersectionObserver((entries) => {
             if (entries[0].isIntersecting && hasMore) {
                 loadProducts();
@@ -53,39 +53,37 @@ export default function Items() {
     }, []);
     
     return (
-        <Suspense fallback={<div>Loading...</div>}>
-            <section className="space-top space-extra-bottom">
-                <div className="container">
-                    <div className="th-sort-bar">
-                        <div className="row justify-content-between align-items-center">
-                            <div className="col-md">
-                                <p className="woocommerce-result-count">Showing results
-                                    {
-                                        categoryId
-                                        &&
-                                        <span>: {products.length > 0 ? products[0].category_name : null}</span>
-                                    }
-                                </p>
-                            </div>
+        <section className="space-top space-extra-bottom">
+            <div className="container">
+                <div className="th-sort-bar">
+                    <div className="row justify-content-between align-items-center">
+                        <div className="col-md">
+                            <p className="woocommerce-result-count">Showing results
+                            {
+                                categoryId
+                                &&
+                                <span>: { products.length > 0 ? products[0].category_name : null }</span>
+                            }
+                            </p>
                         </div>
                     </div>
-                    <div className="row gy-40">
-                        <div className="tab-content" id="nav-tabContent">
-                            <div className="tab-pane fade active show" id="tab-grid" role="tabpanel" aria-labelledby="tab-shop-grid">
-                                <div className="row gy-40">
-                                    {products.map((product, index) => (
-                                        <div className="col-xl-3 col-sm-6" key={index}>
-                                            <CardItem item={product} />
-                                        </div>
-                                    ))}
-                                </div>
-                                {hasMore && <div ref={loaderRef} style={{ height: '20px', textAlign: 'center' }}>{`Loading more${loadingDots}`}</div>}
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
-            </section>
-        </Suspense>
+                <div className="row gy-40">
+                    <div className="tab-content" id="nav-tabContent">
+                        <div className="tab-pane fade active show" id="tab-grid" role="tabpanel" aria-labelledby="tab-shop-grid">
+                            <div className="row gy-40">
+                            {products.map((product, index) => (
+                                <div className="col-xl-3 col-sm-6" key={index}>
+                                    <CardItem item={product} />
+                                </div>
+                            ))}
+                            </div>
+                            {hasMore && <div ref={loaderRef} style={{ height: '20px', textAlign: 'center' }}>{`Loading more${loadingDots}`}</div>}
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
     )
 }
