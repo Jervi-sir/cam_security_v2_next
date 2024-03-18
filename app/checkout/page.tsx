@@ -166,7 +166,7 @@ export default function Checkout() {
             <div className="woocommerce-checkout-payment">
               <ul className="wc_payment_methods payment_methods methods">
                 <li className="wc_payment_method payment_method_bacs">
-                  <input id="payment_method_bacs" type="radio" className="input-radio" name="payment_method" value="bacs" checked="checked" />
+                  <input id="payment_method_bacs" type="radio" className="input-radio" name="payment_method" value="bacs" checked />
                   <label >Direct bank transfer</label>
                   <div className="payment_box payment_method_bacs">
                     <p>Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order will not be shipped until the funds have cleared in our account.

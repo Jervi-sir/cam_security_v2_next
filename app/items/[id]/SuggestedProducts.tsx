@@ -1,5 +1,5 @@
 'use client'
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
 
 import 'swiper/css';
 import 'swiper/css';
@@ -13,7 +13,8 @@ import { Products } from '@/utils/types';
 
 export const SuggestedProducts = ({ product_id }: { product_id: number }) => {
   const [products, setProducts] = useState<Products[]>([])
-  const swiperRef = useRef(null);
+  //const swiperRef = useRef(null);
+  const swiperNavigate = useSwiper();
   
   useEffect(() => {
     getRelatedProducts(product_id).then(e => setProducts(e))
@@ -44,18 +45,18 @@ export const SuggestedProducts = ({ product_id }: { product_id: number }) => {
           }}
           autoplay={{ delay: 2000 }}
           loop={true}
-          ref={swiperRef}
+          //ref={swiperRef}
         >
           {
             products.map((e, index) => (
-              <SwiperSlide>
+              <SwiperSlide key={index}>
                 <CardItem item={e} />
               </SwiperSlide>
             ))
           }
         </Swiper>
-        <button className="slider-arrow slider-prev" onClick={() => swiperRef.current.swiper.slidePrev()}><i className="far fa-arrow-left"></i></button>
-        <button className="slider-arrow slider-next" onClick={() => swiperRef.current.swiper.slideNext()}><i className="far fa-arrow-right"></i></button>
+        <button className="slider-arrow slider-prev" onClick={() => swiperNavigate?.slidePrev }><i className="far fa-arrow-left"></i></button>
+        <button className="slider-arrow slider-next" onClick={() => swiperNavigate?.slideNext }><i className="far fa-arrow-right"></i></button>
 
       </div>
     </div>

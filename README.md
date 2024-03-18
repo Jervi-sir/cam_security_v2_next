@@ -5,6 +5,7 @@ https://www.npmjs.com/package/react-awesome-reveal
 https://www.npmjs.com/package/react-animate-on-scroll
 
 https://stackoverflow.com/questions/74580728/get-url-params-next-js-13
+https://www.youtube.com/watch?v=zPyACEvZvOA
 
 ## Query Supabase
 

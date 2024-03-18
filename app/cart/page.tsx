@@ -21,7 +21,7 @@ export default function Cart() {
               <tbody>
                 {
                   [1,2].map((e, index) => (
-                    <tr className="cart_item">
+                    <tr className="cart_item" key={index}>
                       <td data-title="Product" style={{}}>
                         <a className="cart-productimage" href="shop-detailis.html"><img width="91" height="91" src="assets/img/product/product_thumb_1_1.jpg" alt="Image" /></a>
                       </td>

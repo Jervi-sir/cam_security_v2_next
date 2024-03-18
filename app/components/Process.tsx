@@ -15,7 +15,7 @@ export function Process() {
                     <p className="box-number">01</p>
                 </div>
                 <h3 className="process-box_title">Project Planning</h3>
-                <p className="process-box_text">Internal or 'organic' sources without turnkey growth strategies. Seamlessly promote client-centered</p>
+                <p className="process-box_text">Internal or &apos;organic&apos; sources without turnkey growth strategies. Seamlessly promote client-centered</p>
               </div>
             </div>
             <div className="col-md-6 col-lg-3 process-box-wrap">

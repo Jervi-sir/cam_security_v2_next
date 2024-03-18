@@ -105,7 +105,7 @@ const MenuNav = () => {
           */}
           </li>
           <li><a href="/items?category=1">Baby Security</a></li>
-          <li><a href="/items?category=4">Detecteur d'Intrusion</a></li>
+          <li><a href="/items?category=4">Detecteur d&apos;Intrusion</a></li>
         </ul>
 
       </li>

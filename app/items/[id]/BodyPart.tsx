@@ -3,7 +3,7 @@ import { useState } from "react";
 export const BodyPart = () => {
   const [activeTab, setActiveTab] = useState('description');
 
-  const handleTabClick = (tab) => {
+  const handleTabClick = (tab: string) => {
     setActiveTab(tab);
   };
 
@@ -44,7 +44,7 @@ export const BodyPart = () => {
             whiteboard client-centric sources before cross-platform schemas. Distinctively develop future-proof
             outsourcing without multimedia based portals. Progressively coordinate next-generation architectures
             for collaborative solutions. Professionally restore backward-compatible quality vectors before
-            customer directed metrics. Holisticly restore technically sound internal or "organic" sources before
+            customer directed metrics. Holisticly restore technically sound internal or &quot;organic&quot; sources before
             client-centered human capital underwhelm holistic mindshare for prospective innovation. Seamlessly
             target fully tested infrastructures whereas just in time process improvements. Dynamically exploit
             team driven functionalities vis a vis global total linkage redibly synthesize just in time

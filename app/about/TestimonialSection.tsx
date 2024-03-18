@@ -1,3 +1,5 @@
+import { Settings } from "@/utils/db"
+
 export const TestimonialSection = () => {
   return (
     <>
@@ -115,7 +117,7 @@ export const TestimonialSection = () => {
                     <div className="testi-box_image">
                       <img src="assets/img/testimonial/testi_img_1.png" alt="image" />
                     </div>
-                    <p className="testi-box_text">“I've had the pleasure of working with Webteck for the past year, and I can confidently say that they have been instrumental say that they in the success.”</p>
+                    <p className="testi-box_text">“I&apos;ve had the pleasure of working with { Settings.site_name } for the past year, and I can confidently say that they have been instrumental say that they in the success.”</p>
                     <div className="testi-box_wrapper">
                       <div className="testi-box_profile">
                         <div className="testi-box_author">
@@ -159,7 +161,7 @@ export const TestimonialSection = () => {
                     <div className="testi-box_image">
                       <img src="assets/img/testimonial/testi_img_1.png" alt="image" />
                     </div>
-                    <p className="testi-box_text">“If you have specific questions about gathering or analyzing customer feedback, or if you're looking for general information or analyzing feel free to ask.”</p>
+                    <p className="testi-box_text">“If you have specific questions about gathering or analyzing customer feedback, or if you&apos;re looking for general information or analyzing feel free to ask.”</p>
                     <div className="testi-box_wrapper">
                       <div className="testi-box_profile">
                         <div className="testi-box_author">

@@ -48,8 +48,8 @@ export default function Contact() {
                     <div className="contact-info-wrap">
                         <div className="title-area mt-n2 mb-10">
                             <span className="sub-title style1">Contact Us</span>
-                            <h3 className="sec-title">Let’s working together</h3>
-                            <p className="">Thank you for your interest in Attach Web Agency. We're excited to hear from you and
+                            <h3 className="sec-title">Let&apos;s working together</h3>
+                            <p className="">Thank you for your interest in Attach Web Agency. We&apos;re excited to hear from you and
                                 discuss...</p>
                         </div>
                         <div className="contact-info">

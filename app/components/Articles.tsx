@@ -1,17 +1,24 @@
 'use client'
-import { Swiper, SwiperSlide } from 'swiper/react';
-
-import 'swiper/css';
+import { useRef } from 'react';
+import { Swiper, useSwiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/autoplay';
-import { Navigation, Autoplay } from 'swiper/modules';
-import { useRef } from 'react';
 import { CardArticle } from '@/components/CardArticle';
 
-
 export function Articles() {
-  const swiperRef = useRef(null);
+  //const swiperRef = useRef(null);
+  const swiperNavigate = useSwiper();
+
+  const handlePrev = () => {
+    swiperNavigate?.slidePrev;
+  };
+
+  const handleNext = () => {
+    swiperNavigate?.slideNext;
+  };
+
   return (
     <section className="overflow-hidden space" id="blog-sec">
       <div className="container">
@@ -21,6 +28,7 @@ export function Articles() {
         </div>
         <div className="slider-area">
           <Swiper
+            //ref={swiperRef}
             className="th-slider has-shadow"
             id="blogSlider1"
             breakpoints={{
@@ -37,7 +45,6 @@ export function Articles() {
             }}
             autoplay={{ delay: 2000 }}
             loop={true}
-            ref={swiperRef}
           >
             {
               [1,2,3,4,5,6].map((e, index) => (
@@ -47,9 +54,8 @@ export function Articles() {
               ))
             }
           </Swiper>
-          <button className="slider-arrow slider-prev" onClick={() => swiperRef.current.swiper.slidePrev()}><i className="far fa-arrow-left"></i></button>
-          <button className="slider-arrow slider-next" onClick={() => swiperRef.current.swiper.slideNext()}><i className="far fa-arrow-right"></i></button>
-
+          <button className="slider-arrow slider-prev" onClick={handlePrev}><i className="far fa-arrow-left"></i></button>
+          <button className="slider-arrow slider-next" onClick={handleNext}><i className="far fa-arrow-right"></i></button>
         </div>
       </div>
     </section>

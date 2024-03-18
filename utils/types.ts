@@ -17,7 +17,7 @@ export interface Product {
   quantity: number,
   images: string[],
   description: string,
-  characteristics: string,
+  characteristics: string[],
   brand_name: string,
   category_name: string
 }

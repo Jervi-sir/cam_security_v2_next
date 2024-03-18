@@ -9,7 +9,7 @@ import { Autoplay, EffectFade, Thumbs } from 'swiper/modules';
 SwiperCore.use([Autoplay, EffectFade, Thumbs]);
 
 
-const ProductSlide = ({ thumbnails }: { thumbnails: string | string[] }) => {
+const ProductSlide = ({ thumbnails }: { thumbnails: string[] }) => {
   const [thumbsSwiper, setThumbsSwiper] = React.useState(null);
   
   const normalizedThumbnails = Array.isArray(thumbnails) ? thumbnails : [thumbnails];

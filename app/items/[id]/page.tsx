@@ -9,7 +9,7 @@ import { Product } from "@/utils/types";
 
 import { useParams } from 'next/navigation'
 
-const initialProductState: Product = { id: 0, title: '', price: 0, quantity: 0, images: [], description: '', characteristics: '', brand_name: '', category_name: ''};
+const initialProductState: Product = { id: 0, title: '', price: 0, quantity: 0, images: [], description: '', characteristics: [], brand_name: '', category_name: ''};
 
 export default function Item() {
   const params = useParams()
@@ -35,7 +35,7 @@ export default function Item() {
   }
 
   useEffect(() => {
-    getThisProduct(id).then(e => setProduct(e));
+    getThisProduct(Number(id)).then(e => setProduct(e));
   }, [])
 
   return (
@@ -64,7 +64,7 @@ export default function Item() {
                     null
                     :
                     (product.characteristics).map((e, index) => (
-                      <li>{e}</li>
+                      <li key={index}>{e}</li>
                     ))
                     }
                   </ul>
@@ -88,7 +88,7 @@ export default function Item() {
           
           <BodyPart />
 
-          <SuggestedProducts product_id={id} />
+          <SuggestedProducts product_id={Number(id)} />
           
         </div>
       </section>

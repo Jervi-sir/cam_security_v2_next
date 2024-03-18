@@ -16,7 +16,7 @@ export default function Service() {
                     create, manage, and modify digital content, such as text, images, videos, and documents, on
                     a website without requiring in-depth technical knowledge. CMS platforms streamline the
                     process of website management, enabling users to focus on content creation and organization
-                    rather than coding and programming. Here's a deeper look into CMS:</p>
+                    rather than coding and programming. Here&apos;s a deeper look into CMS:</p>
                   <div className="features-wrapper">
                     <div className="features-img th-anim">
                       <img src="/assets/img/normal/feature_img.jpg" alt="" />
@@ -45,7 +45,7 @@ export default function Service() {
 
                   <p className="mb-30">The process of managing content using a Content Management System (CMS)
                     involves several key steps to ensure effective content creation, organization, and
-                    publication. Here's a typical workflow:</p>
+                    publication. Here&apos;s a typical workflow:</p>
                   <div className="service-process-wrap">
                     <div className="service-process">
                       <div className="service-process_num">01</div>
