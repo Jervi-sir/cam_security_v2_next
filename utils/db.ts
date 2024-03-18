@@ -10,5 +10,10 @@ export const Settings = {
   description: `Their team's technical expertise is truly outstanding. They took
   the time to thoroughly understand our goals and requirements and then designed and
   implemented solutions that not only addressed our immediate challenges but also
-  positioned us for future growth.`
+  positioned us for future growth.`,
+
+  facebook: 'facebook',
+  twitter: 'twitter',
+  linkedin: 'linkedin',
+  whatsapp: 'whatsapp',
 }

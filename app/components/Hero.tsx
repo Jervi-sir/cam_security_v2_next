@@ -16,7 +16,7 @@ export function Hero() {
                 <p className="hero-text">Our expert will help you find the best</p>
                 <div className="btn-group  justify-content-center justify-content-lg-start">
                   <a href="service.html" className="th-btn style4">View Services</a>
-                  <a href="contact.html" className="th-btn">Make a Reservation</a>
+                  <a href="https://quiz.simplisafe.com/kaedkhe4?L=Full+Page&uid=&deferred=true&wizardType=embedded&uid=d70b0331-62c9-4d8c-92fb-1934a57e3a4f" className="th-btn">Make an Estimation</a>
                 </div>
               </div>
             </div>
