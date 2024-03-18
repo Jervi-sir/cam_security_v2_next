@@ -41,7 +41,7 @@ export function Articles() {
           >
             {
               [1,2,3,4,5,6].map((e, index) => (
-              <SwiperSlide>
+              <SwiperSlide key={index}>
                 <CardArticle article={e} />
               </SwiperSlide>
               ))

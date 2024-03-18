@@ -9652,7 +9652,6 @@ ul.comment-list:has(> .th-comment-item ~ .th-comment-item):first-child > .th-pos
   position: relative;
   z-index: 6;
   max-width: 720px;
-  padding: 410px 0 201px 0;
 }
 
 .hero-style2 .hero-title {
@@ -9715,14 +9714,13 @@ ul.comment-list:has(> .th-comment-item ~ .th-comment-item):first-child > .th-pos
 /* Large devices */
 @media (max-width: 1199px) {
   .hero-style2 {
-    padding: 300px 0 180px 0;
+    opacity: 1;
   }
 }
 
 /* Medium devices */
 @media (max-width: 991px) {
   .hero-style2 {
-    padding: 180px 0 80px 0;
     text-align: center;
   }
   .hero-style2 .hero-text {
@@ -11226,7 +11224,8 @@ table.woocommerce-product-attributes {
       -ms-transform: scaleX(1);
           transform: scaleX(1);
   visibility: visible;
-  opacity: 1;
+  opacity: 0.2;
+  cursor: pointer;
 }
 
 .th-product:hover .product-actions {
@@ -24034,5 +24033,3 @@ brand-title {
 }
 
 /*# sourceMappingURL=style.css.map */
-
-

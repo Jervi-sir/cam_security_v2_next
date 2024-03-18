@@ -1,6 +1,8 @@
+import { Settings } from "@/utils/db";
+
 export function Footer() {
   return (
-    <footer className="footer-wrapper footer-layout1" data-bg-src="assets/img/bg/footer_bg_1.jpg">
+    <footer className="footer-wrapper footer-layout1" data-bg-src="/assets/img/bg/footer_bg_1.jpg">
         <div className="widget-area">
             <div className="container">
                 <div className="row justify-content-between">
@@ -8,30 +10,26 @@ export function Footer() {
                         <div className="footer-top-area">
                             <div className="footer-top">
                                 <div className="footer-logo">
-                                    <a href="index.html"><img src="assets/img/logo-footer.svg" alt="Webtek" /></a>
+                                    <a href="index.html"><img src={ Settings.footer_logo_url } alt={ Settings.site_name } /></a>
                                 </div>
                                 <div className="">
-                                    <p className="footer-text">Their team's technical expertise is truly outstanding. They took
-                                        the time to thoroughly understand our goals and requirements and then designed and
-                                        implemented solutions that not only addressed our immediate challenges but also
-                                        positioned us for future growth.</p>
+                                    <p className="footer-text">{Settings.description}</p>
                                 </div>
                             </div>
                             <div className="footer-menu-area">
                                 <ul className="footer-menu">
                                     <li>
-                                        <a href="index.html">Home</a>
+                                        <a href="/">Home</a>
                                     </li>
-                                    <li><a href="#">Pages</a></li>
+                                    <li><a href="/items">Products</a></li>
                                     <li><a href="service.html">Services</a></li>
-                                    <li><a href="blog.html">Blog</a></li>
-                                    <li><a href="contact.html">Contact</a></li>
+                                    <li><a href="/contact">Contact</a></li>
                                 </ul>
                                 <div className="th-social">
-                                    <a href="https://www.facebook.com/"><i className="fab fa-facebook-f"></i></a>
-                                    <a href="https://www.twitter.com/"><i className="fab fa-twitter"></i></a>
-                                    <a href="https://www.linkedin.com/"><i className="fab fa-linkedin-in"></i></a>
-                                    <a href="https://www.whatsapp.com/"><i className="fab fa-whatsapp"></i></a>
+                                    <a href={Settings.facebook}><i className="fab fa-facebook-f"></i></a>
+                                    <a href={Settings.twitter}><i className="fab fa-twitter"></i></a>
+                                    <a href={Settings.linkedin}><i className="fab fa-linkedin-in"></i></a>
+                                    <a href={Settings.whatsapp}><i className="fab fa-whatsapp"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -45,7 +43,7 @@ export function Footer() {
                             </div>
                             <div>
                                 <span className="info-box_subtitle">Address</span>
-                                <p className="info-box_text">12 Division Park, SKY <span className="d-block"> 12546. Berlin</span></p>
+                                <p className="info-box_text">{Settings.full_location}</p>
                             </div>
                         </div>
                     </div>
@@ -57,8 +55,7 @@ export function Footer() {
                             <div>
                                 <span className="info-box_subtitle">Email</span>
                                 <p className="info-box_text">
-                                    <a href="mailto:help@webteck-mail.com" className="info-box_link">help@webteck-mail.com</a>
-                                    <a href="mailto:24/7@webteck-online.com" className="info-box_link">24/7@webteck-online.com</a>
+                                    <a href={`mailto:${Settings.email}`} className="info-box_link">{Settings.email}</a>
                                 </p>
                             </div>
                         </div>
@@ -71,8 +68,7 @@ export function Footer() {
                             <div>
                                 <span className="info-box_subtitle">Call</span>
                                 <p className="info-box_text">
-                                    <a href="tel:+215253632156" className="info-box_link">+(215) 2536-32156</a>
-                                    <a href="tel:+452369421587" className="info-box_link">+(452) 3694-21587</a>
+                                    <a href="tel:+215253632156" className="info-box_link">{Settings.phone_number}</a>
                                 </p>
                             </div>
                         </div>
@@ -82,7 +78,7 @@ export function Footer() {
         </div>
         <div className="copyright-wrap text-center">
             <div className="container">
-                <p className="copyright-text">Copyright <i className="fal fa-copyright"></i> 2024 <a href="home-web-agency.html">Webtek</a>. All Rights Reserved.</p>
+                <p className="copyright-text">Copyright <i className="fal fa-copyright"></i> { new Date().getFullYear() } <a href="home-web-agency.html">{ Settings.site_name }</a>. All Rights Reserved.</p>
             </div>
         </div>
     </footer>

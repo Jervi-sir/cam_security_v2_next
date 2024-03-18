@@ -6,12 +6,18 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/autoplay';
 import { Navigation, Autoplay } from 'swiper/modules';
-import { useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { CardItem } from '@/components/CardItem';
+import { getRelatedProducts } from '@/utils/supabase';
+import { Products } from '@/utils/types';
 
-export const SuggestedProducts = () => {
+export const SuggestedProducts = ({ product_id }: { product_id: number }) => {
+  const [products, setProducts] = useState<Products[]>([])
   const swiperRef = useRef(null);
   
+  useEffect(() => {
+    getRelatedProducts(product_id).then(e => setProducts(e))
+  }, [])
   return (
     <div className="space-extra-top mb-30">
       <div className="row">
@@ -41,7 +47,7 @@ export const SuggestedProducts = () => {
           ref={swiperRef}
         >
           {
-            [1, 2, 3, 4, 5, 6].map((e, index) => (
+            products.map((e, index) => (
               <SwiperSlide>
                 <CardItem item={e} />
               </SwiperSlide>

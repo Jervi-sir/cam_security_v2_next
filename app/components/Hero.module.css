@@ -1,0 +1,85 @@
+
+
+/* Extra Small Devices, Phones */
+@media (max-width: 575.98px) {
+  .heroMargins {
+    margin-top: 20%;
+  }
+
+  .leftSide {
+    margin-bottom: 10%;
+  }
+}
+
+/* Small Devices, Phones */
+@media (min-width: 576px) {
+  /* Your styles here */
+}
+
+/* Medium Devices, Tablets */
+@media (min-width: 768px) {
+  /* Your styles here */
+}
+
+/* Large Devices, Desktops */
+@media (max-width: 992px) {
+  .heroMargins {
+    margin-top: 20%;
+  }
+
+  .leftSide {
+    margin-bottom: 10%;
+  }
+}
+
+/* Extra Large Devices, Large Desktops */
+@media (min-width: 995px) {
+  .heroMargins {
+    margin-top: 15%;
+  }
+
+  .leftSide {
+    margin-bottom: 10%;
+  }
+}
+
+/* Extra Extra Large Devices, Larger Desktops */
+@media (min-width: 1400px) {
+  /* Your styles here */
+}
+
+/* Short Screens */
+@media (max-height: 700px) {
+  /* Your styles here */
+}
+
+/* Aspect Ratio: Wide Screens */
+@media (min-aspect-ratio: 16/9) {
+  /* Your styles here */
+}
+
+/* Aspect Ratio: Tall Screens */
+@media (max-aspect-ratio: 3/4) {
+  /* Your styles here */
+}
+
+/* Orientation: Portrait */
+@media (orientation: portrait) {
+  /* Your styles here */
+}
+
+/* Orientation: Landscape */
+@media (orientation: landscape) {
+  /* Your styles here */
+}
+
+/* Print */
+@media print {
+  /* Your styles here */
+}
+
+/* High Resolution */
+@media (min-resolution: 2dppx), (min-resolution: 192dpi) {
+  /* Your styles here */
+}
+
