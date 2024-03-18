@@ -18,7 +18,7 @@ export default function Items() {
     const loadProducts = async () => {
         if (!hasMore) return;
         
-        const newProducts = await getProducts(offset, pageLimit, Number(categoryId));
+        const newProducts = await getProducts(offset, pageLimit, Number(categoryId) || null);
         if (newProducts.length === 0 || newProducts.length < pageLimit) {
             setHasMore(false);
         }
