@@ -119,7 +119,7 @@ const Step3Section = ({ nextStep, prevStep }) => {
     <>
       <div className="step step3">
         <div>
-          <h4 className="title">We've got two setup options. Which do you prefer?</h4>
+          <h4 className="title">We&apos;ve got two setup options. Which do you prefer?</h4>
           <p className="w-75 text-center mx-auto"><b>Tip: </b> No matter which option you choose, live expert assistance via phone call is available to ensure your system is installed correctly.</p>
         </div>
         <div className="options">
