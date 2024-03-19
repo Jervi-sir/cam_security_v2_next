@@ -35,7 +35,7 @@ export function Header() {
         <div className="th-menu-area text-center" >
           <button className="th-menu-toggle" onClick={() => setIsOpened(false)}><i className="fal fa-times"></i></button>
           <div className="mobile-logo">
-            <a href="home-web-agency.html"><img src={Settings.logo_url2} alt={Settings.site_name} /></a>
+            <a href="/"><img src={Settings.logo_url2} alt={Settings.site_name} /></a>
           </div>
           <div className="th-mobile-menu">
             <MenuNav />
@@ -49,7 +49,7 @@ export function Header() {
               <div className="row align-items-center justify-content-between">
                 <div className="col-auto">
                   <div className="header-logo">
-                    <a href="home-web-agency.html"><img src={Settings.logo_url2} alt={Settings.site_name} /></a>
+                    <a href="/"><img src={Settings.logo_url2} alt={Settings.site_name} /></a>
                   </div>
                 </div>
                 <div className="col-auto">

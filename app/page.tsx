@@ -1,20 +1,26 @@
 'use client'
-
 import { Hero } from "./components/Hero";
 import { ProductSuggestion } from "./components/ProductSuggestion";
 import { Process } from "./components/Process";
 import { Articles } from "./components/Articles";
-import { Header } from "../components/Header";
 import { Slide } from "react-awesome-reveal";
-import { useEffect } from "react";
-import { getRandomData, supabaseClient } from "@/utils/supabase";
+import { PopupProvider, usePopup } from "@/context/PopupContext";
+import Estimation from "./estimation/page";
+import './estimation/Estimation.css'
 
 export default function Home() {
+  return (
+    <PopupProvider>
+      <Content />
+    </PopupProvider>
+  );
+}
 
-
-
+const Content = () => {
+  const { showPopup } = usePopup();
   return (
     <>
+      {showPopup && <Estimation />}
       <Hero />
       <ProductSuggestion />
       <Slide damping={2} delay={200} cascade triggerOnce>
@@ -22,5 +28,5 @@ export default function Home() {
       </Slide>
       <Articles />
     </>
-  );
+  )
 }

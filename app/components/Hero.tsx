@@ -2,8 +2,13 @@
 import { Fade } from 'react-awesome-reveal';
 import styles from './Hero.module.css';
 import { Settings } from '@/utils/db';
-
+import { useState } from 'react';
+import Estimation from '../estimation/page';
+import '../estimation/Estimation.css'
+import { usePopup } from '@/context/PopupContext';
 export function Hero() {
+  const { togglePopup } = usePopup();
+
   return (
     <Fade cascade damping={0.1} triggerOnce>
       <div className="th-hero-wrapper hero-2 " id="hero" data-bg-src="assets/img/bg/hero_bg_1.jpg">
@@ -16,13 +21,13 @@ export function Hero() {
                 <p className="hero-text">Our expert will help you find the best</p>
                 <div className="btn-group  justify-content-center justify-content-lg-start">
                   <a href="service.html" className="th-btn style4">View Services</a>
-                  <a href="https://quiz.simplisafe.com/kaedkhe4?L=Full+Page&uid=&deferred=true&wizardType=embedded&uid=d70b0331-62c9-4d8c-92fb-1934a57e3a4f" className="th-btn">Make an Estimation</a>
+                  <button className="th-btn" onClick={togglePopup} >Make an Estimation</button>
                 </div>
               </div>
             </div>
             <div className="col-lg-6">
-              <div className="hero-style2">
-                <iframe width="560" height="400" src={Settings.youtube_url} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+              <div className="hero-style2" style={{height: 400, borderRadius: '1em', overflow: 'hidden'}}>
+                <iframe width="560" height="400" src={Settings.youtube_url} title={Settings.site_name} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
               </div>
             </div>
           </div>
