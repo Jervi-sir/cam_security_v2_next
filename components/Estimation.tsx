@@ -1,10 +1,10 @@
 'use client'
 import { useState } from 'react';
-import './Estimation.css'
+import '../app/Estimation.css'
 import { usePopup } from '@/context/PopupContext';
 import { EstimationProvider, useEstimation } from '@/context/EsitmationContext';
 
-export default function Estimation() {
+export default function EstimationComponent() {
   const { togglePopup } = usePopup();
   const [currentStep, setCurrentStep] = useState(1);
   const [selectedProperty, setSelectedProperty] = useState(null);
