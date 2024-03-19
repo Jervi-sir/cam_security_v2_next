@@ -3,8 +3,6 @@ import { Fade } from 'react-awesome-reveal';
 import styles from './Hero.module.css';
 import { Settings } from '@/utils/db';
 import { useState } from 'react';
-import Estimation from '../estimation/page';
-import '../Estimation.css'
 
 import { usePopup } from '@/context/PopupContext';
 export function Hero() {
