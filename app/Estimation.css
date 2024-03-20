@@ -188,3 +188,23 @@
   width: 100%;
   height: 100%;
 }
+
+
+/*  ---- */
+
+@media (max-width: 400px) {
+  .estimation-container {
+    transform: scale(0.6);
+  }
+}
+
+@media (max-width: 430px) {
+  .estimation-container {
+    position: relative;
+    transform: scale(0.7);
+    top: 50%;
+    left: 0;
+    right: 0;
+  }
+}
+

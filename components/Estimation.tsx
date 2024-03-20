@@ -28,23 +28,25 @@ export default function EstimationComponent() {
           onClick={togglePopup}
           style={{ cursor: 'pointer' }}
         ></div>
-        <div className="estimation">
-          <button className='estimation-close' onClick={togglePopup}></button>
-          {/* Step 1 */}
-          {currentStep === 1 && <Step1Section nextStep={nextStep} />}
-          {/* Step 2 */}
-          {currentStep === 2 && <Step2Section nextStep={nextStep} prevStep={prevStep} />}
-          {/* Step 3 */}
-          {currentStep === 3 && <Step3Section nextStep={nextStep} prevStep={prevStep} />}
-          {/* Step 4 */}
-          {currentStep === 4 && <Step4Section nextStep={nextStep} prevStep={prevStep} />}
-          {/* Step 5 */}
-          {currentStep === 5 && <Step5Section nextStep={nextStep} prevStep={prevStep} />}
-          {/* Step 6 */}
-          {currentStep === 6 && <Step6Section nextStep={nextStep} prevStep={prevStep} />}
-          {/* Step 7 */}
-          {currentStep === 7 && <Step7Section nextStep={nextStep} prevStep={prevStep} />}
-          {/* action */}
+        <div className="estimation-container">
+          <div className="estimation">
+            <button className='estimation-close' onClick={togglePopup}></button>
+            {/* Step 1 */}
+            {currentStep === 1 && <Step1Section nextStep={nextStep} />}
+            {/* Step 2 */}
+            {currentStep === 2 && <Step2Section nextStep={nextStep} prevStep={prevStep} />}
+            {/* Step 3 */}
+            {currentStep === 3 && <Step3Section nextStep={nextStep} prevStep={prevStep} />}
+            {/* Step 4 */}
+            {currentStep === 4 && <Step4Section nextStep={nextStep} prevStep={prevStep} />}
+            {/* Step 5 */}
+            {currentStep === 5 && <Step5Section nextStep={nextStep} prevStep={prevStep} />}
+            {/* Step 6 */}
+            {currentStep === 6 && <Step6Section nextStep={nextStep} prevStep={prevStep} />}
+            {/* Step 7 */}
+            {currentStep === 7 && <Step7Section nextStep={nextStep} prevStep={prevStep} />}
+            {/* action */}
+          </div>
         </div>
       </div>
     </EstimationProvider>
