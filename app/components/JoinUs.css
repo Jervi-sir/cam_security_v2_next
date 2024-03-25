@@ -1,0 +1,24 @@
+.appointment-radio-wrapper .appointment-radio {
+  flex-wrap: wrap;
+}
+
+.appointment-radio {
+  display: flex;
+  flex-direction: row;
+  /*flex-direction: column;*/
+}
+
+@media (min-width: 800px) {
+  .appointment-radio {
+    /*flex-direction: row;*/
+  }
+}
+
+.class-name {
+  margin: 5px;
+}
+
+/* Ensure proper spacing and alignment */
+.sec-title {
+  margin-right: 15px;
+}

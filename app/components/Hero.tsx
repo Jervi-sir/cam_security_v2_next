@@ -15,12 +15,11 @@ export function Hero() {
           <div className={`row align-items-center ${styles.heroMargins}`}>
             <div className="col-lg-6">
               <div className={`hero-style2 ${styles.leftSide}`}>
-                <h2 className="hero-title"> Security doesn’t have to be complicated<span className="title"></span>
-                </h2>
-                <p className="hero-text">Our expert will help you find the best</p>
+                <h2 className="hero-title"> La Sécurité ne doit pas être Compliquée<span className="title"></span></h2>
+                <p className="hero-text">Nos experts vous aidera à trouver les meilleures solutions</p>
                 <div className="btn-group  justify-content-center justify-content-lg-start">
-                  <a href="service.html" className="th-btn style4">View Services</a>
-                  <button className="th-btn" onClick={togglePopup} >Make an Estimation</button>
+                  <a href="" className="th-btn style4">Voir les services</a>
+                  <button className="th-btn" onClick={togglePopup} >Faire une Estimation</button>
                 </div>
               </div>
             </div>

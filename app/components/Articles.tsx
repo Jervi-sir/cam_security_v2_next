@@ -23,8 +23,8 @@ export function Articles() {
     <section className="overflow-hidden space" id="blog-sec">
       <div className="container">
         <div className="title-area text-center">
-          <span className="sub-title">News & Article</span>
-          <h2 className="sec-title">Latest news and updates</h2>
+          <span className="sub-title">NOUVELLES et ARTICLES</span>
+          <h2 className="sec-title">Dernières nouvelles et mises à jour</h2>
         </div>
         <div className="slider-area">
           <Swiper

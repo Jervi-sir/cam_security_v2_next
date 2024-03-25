@@ -15,8 +15,8 @@ export function ProductSuggestion() {
       <section className="space-top space-extra-bottom">
         <div className="container">
           <div className="title-area text-center">
-            <span className="sub-title">Our Best Products</span>
-            <h2 className="sec-title">We Offer Better Products for the Market </h2>
+            <span className="sub-title">Nos Meilleurs Produits</span>
+            <h2 className="sec-title">Nous Offrons le Meilleurs du Marché </h2>
           </div>
           <div className="row gy-40">
             <div className="tab-content" id="nav-tabContent">
@@ -34,7 +34,7 @@ export function ProductSuggestion() {
             </div>
           </div>
           <div style={{marginTop: '50px', textAlign: 'center'}}>
-            <a href="/items" className="th-btn style4">View More Products</a>
+            <a href="/items" className="th-btn style4">Voir Plus</a>
           </div>
         </div>
         

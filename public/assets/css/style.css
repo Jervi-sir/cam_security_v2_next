@@ -540,7 +540,7 @@ textarea,
 input {
   height: 56px;
   padding: 0 25px 0 25px;
-  padding-right: 45px;
+  padding-right: 25px;
   border: 1px solid var(--smoke-color);
   color: var(--body-color);
   background-color: var(--smoke-color);
@@ -20246,7 +20246,7 @@ brand-title {
 }
 
 .service-box .box-title {
-  font-size: 20px;
+  font-size: 19px;
   font-weight: 600;
   line-height: 24px;
   letter-spacing: -0.4px;
@@ -20283,9 +20283,9 @@ brand-title {
 
 .service-box .icon-btn:hover i {
   color: var(--white-color);
-  -webkit-transform: rotate(320deg);
-      -ms-transform: rotate(320deg);
-          transform: rotate(320deg);
+  -webkit-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+          transform: rotate(360deg);
 }
 
 .service-box .icon-btn i {
