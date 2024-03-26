@@ -16,6 +16,17 @@ export const getRandomData = async (limit:number = 4) => {
   }
 }
 
+export const getRandomArticles = async (limit: number = 4) => {
+  const { data, error } = await supabaseClient
+    .rpc('get_random_articles', { limit_count: limit })
+  if (error) {
+    console.error('query error:', error);
+  } else {
+    return (data); 
+  }
+}
+
+
 export const getThisProduct = async (item_id: number) => {
   const { data, error } = await supabaseClient
     .rpc('get_this_product', { product_id: item_id });
@@ -48,6 +59,8 @@ export const getProducts = async (page_offset: number = 0, page_limit: number = 
     return (data); 
   }
 }
+
+
 
 /*
  const { data, error } = await supabaseClient

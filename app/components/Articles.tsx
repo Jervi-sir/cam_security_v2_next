@@ -1,13 +1,16 @@
 'use client'
-import { useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Swiper, useSwiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/autoplay';
 import { CardArticle } from '@/components/CardArticle';
+import { getRandomArticles } from '@/utils/supabase';
+import { Articles } from '@/utils/types';
 
 export function Articles() {
+  const [articles, setArticles] = useState<Articles[]>([]);
   //const swiperRef = useRef(null);
   const swiperNavigate = useSwiper();
 
@@ -18,6 +21,12 @@ export function Articles() {
   const handleNext = () => {
     swiperNavigate?.slideNext;
   };
+
+  useEffect(() => {
+    getRandomArticles(4).then(e => {
+      setArticles(e);
+    })
+  }, [])
 
   return (
     <section className="overflow-hidden space" id="blog-sec">
@@ -47,7 +56,7 @@ export function Articles() {
             loop={true}
           >
             {
-              [1,2,3,4,5,6].map((e, index) => (
+              articles.map((e, index) => (
               <SwiperSlide key={index}>
                 <CardArticle article={e} />
               </SwiperSlide>

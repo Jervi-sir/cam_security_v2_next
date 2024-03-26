@@ -1,6 +1,10 @@
+'use client'
+import { usePopup } from "@/context/PopupContext";
 import { Settings } from "@/utils/db"
 
 export const CTA = () => {
+  const { togglePopup } = usePopup();
+
   return (
     <section className="appointment-sec space-extra3 th-radius overflow-hidden space-top space-bottom">
       <div className="container">
@@ -17,7 +21,7 @@ export const CTA = () => {
               <div className="feature-area2 d-flex flex-column">
                 <div className="d-flex gap-3 flex-column flex-xl-row">
                   <a href="/items" className="th-btn style4">Trouver des Produits</a>
-                  <a href="about.html" className="th-btn">Faire une Estimation</a>
+                  <button className="th-btn" onClick={togglePopup}>Faire une Estimation</button>
                 </div>
                 <div className="feature-wrapper style2">
                   <div className="feature-icon">

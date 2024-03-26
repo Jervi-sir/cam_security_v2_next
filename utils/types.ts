@@ -21,3 +21,33 @@ export interface Product {
   brand_name: string,
   category_name: string
 }
+
+export interface Articles {
+  id: number; 
+  title: string; 
+  author_id: number; 
+  content: string; 
+  summary: string | null; 
+  published_date: Date;
+  last_modified_date: Date; 
+  category: string | null; 
+  status: string; 
+  tags: string[]; 
+  image_url: string[]; 
+  views: number; 
+};
+
+export interface Article {
+  id: number; 
+  title: string; 
+  author_id: number; 
+  content: string; 
+  summary: string | null; 
+  published_date: Date;
+  last_modified_date: Date; 
+  category: string | null; 
+  status: string; 
+  tags: string[]; 
+  image_url: string[]; 
+  views: number; 
+};
