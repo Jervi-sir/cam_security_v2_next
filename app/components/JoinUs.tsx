@@ -234,14 +234,14 @@ export const JoinUs = () => {
                 <div className="row">
                   <div className="appointment-radio-wrapper">
                     <div className="appointment-radio align-items-center d-flex flex-column align-items-start flex-lg-row">
-                      <h4 className="sec-title m-0">Avez-vous de l'Expérience Précédente?</h4>
+                      <h4 className="sec-title m-0">Avez-vous de l&apos;Expérience Précédente?</h4>
                       <div className="class-name" onClick={() => setExperience(true)}>
                         <input type="radio" id="check1" name="radio-group" checked={experience ? true : false} />
-                        <label htmlFor="check1">Oui j'en ai</label>
+                        <label htmlFor="check1">Oui j&apos;en ai</label>
                       </div>
                       <div className="class-name" onClick={() => setExperience(false)}>
                         <input type="radio" id="check2" name="radio-group" checked={!experience ? true : false} />
-                        <label htmlFor="check2">Non, je n'ai pas et </label>
+                        <label htmlFor="check2">Non, je n&apos;ai pas et </label>
                       </div>
                     </div>
                   </div>

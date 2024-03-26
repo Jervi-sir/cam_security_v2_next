@@ -15,7 +15,7 @@ export const CTA = () => {
             </div>
             <div className="cta-title-area">
               <div className="title-area mb-45 text-center">
-                <span className="sub-title"> Qu'est-ce qui te Retient !</span>
+                <span className="sub-title"> Qu&apos;est-ce qui te Retient !</span>
                 <h3 className="sec-title">Nous Offrons des services adéquate à vos besoin de sécurité</h3>
               </div>
               <div className="feature-area2 d-flex flex-column">
@@ -29,7 +29,7 @@ export const CTA = () => {
                   </div>
                   <div className="media-body">
                     <p className="header-info_link"><a href={`tel:${Settings.phone_number}`}>Applez Nous: {Settings.phone_number}</a></p>
-                    <span className="header-info_label">Pour plus d'information</span>
+                    <span className="header-info_label">Pour plus d&apos;information</span>
                   </div>
                 </div>
               </div>
