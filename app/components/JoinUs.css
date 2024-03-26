@@ -22,3 +22,9 @@
 .sec-title {
   margin-right: 15px;
 }
+
+input[name="number"]::placeholder {
+  color: #999; /* Placeholder text color */
+  opacity: 0.5; /* Full opacity */
+  font-style: italic; /* Italic font style */
+}

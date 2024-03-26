@@ -7,6 +7,16 @@ https://www.npmjs.com/package/react-animate-on-scroll
 https://stackoverflow.com/questions/74580728/get-url-params-next-js-13
 https://www.youtube.com/watch?v=zPyACEvZvOA
 
+https://iconscout.com/illustrations/safe-box
+https://www.youtube.com/watch?v=-_bhH4MLq1Y
+
+
+## Templates 
+
+- Theme  - [OnSafe](https://themeforest.net/item/onsafe-cctv-security-html-template/42659812)
+- Dashboard - [Shadcn Next](https://github.com/Kiranism/next-shadcn-dashboard-starter)
+
+
 ## Query Supabase
 
 ```

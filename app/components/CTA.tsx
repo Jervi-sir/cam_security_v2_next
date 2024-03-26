@@ -1,94 +1,46 @@
+import { Settings } from "@/utils/db"
+
 export const CTA = () => {
   return (
-    <section className="space">
+    <section className="appointment-sec space-extra3 th-radius overflow-hidden space-top space-bottom">
       <div className="container">
-        <div className="cta-area">
+        <div className="cta-area bg-white">
           <div className="cta-feature_wrapper">
             <div className="cta-feature_img">
-              <img src="/assets/img/normal/cta-1.png" alt="" />
+              <img src="/assets/illustrations/cctv_thief2.svg" alt="" style={{width: '30rem'}} />
             </div>
             <div className="cta-title-area">
               <div className="title-area mb-45 text-center">
-                <span className="sub-title"> Lets’s consultation </span>
-                <h2 className="sec-title">We Make Awesome IT Services For Your Newly Business</h2>
+                <span className="sub-title"> Qu'est-ce qui te Retient !</span>
+                <h3 className="sec-title">Nous Offrons des services adéquate à vos besoin de sécurité</h3>
               </div>
-              <div className="feature-area2">
-                <a href="about.html" className="th-btn">Start A Projects</a>
+              <div className="feature-area2 d-flex flex-column">
+                <div className="d-flex gap-3 flex-column flex-xl-row">
+                  <a href="/items" className="th-btn style4">Trouver des Produits</a>
+                  <a href="about.html" className="th-btn">Faire une Estimation</a>
+                </div>
                 <div className="feature-wrapper style2">
                   <div className="feature-icon">
                     <a href="tel:+2583258235"><i className="fa-solid fa-phone"></i></a>
                   </div>
                   <div className="media-body">
-                    <p className="header-info_link"><a href="tel:+2583258235">Call Us: 258-3258 235</a></p>
-                    <span className="header-info_label">For any question</span>
+                    <p className="header-info_link"><a href={`tel:${Settings.phone_number}`}>Applez Nous: {Settings.phone_number}</a></p>
+                    <span className="header-info_label">Pour plus d'information</span>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="cta-feature_img">
-              <img src="/assets/img/normal/cta-2.png" alt="" />
+            <div className="cta-feature_img" style={{width: '30rem'}}>
+              <img src="/assets/illustrations/cctv_thief1.svg" alt="" style={{width: '15rem'}} />
             </div>
           </div>
-          <div className="swiper th-slider brand-slider" id="brandSlider2" data-slider-options='{"breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":"2"},"768":{"slidesPerView":"3"},"992":{"slidesPerView":"3"},"1200":{"slidesPerView":"4"},"1400":{"slidesPerView":"5"}}}'>
-            <div className="swiper-wrapper">
-              <div className="swiper-slide">
-                <div className="brand-card wow ">
-                  <a href="">
-                    <img className="original" src="/assets/img/brand/brand_3_1.svg" alt="Brand Logo" />
-                    <img className="gray" src="/assets/img/brand/brand_3_1.svg" alt="Brand Logo" />
-                  </a>
-                </div>
-              </div>
-              <div className="swiper-slide">
-                <div className="brand-card wow ">
-                  <a href="">
-                    <img className="original" src="/assets/img/brand/brand_3_2.svg" alt="Brand Logo" />
-                    <img className="gray" src="/assets/img/brand/brand_3_2.svg" alt="Brand Logo" />
-                  </a>
-                </div>
-              </div>
-              <div className="swiper-slide">
-                <div className="brand-card wow ">
-                  <a href="">
-                    <img className="original" src="/assets/img/brand/brand_3_3.svg" alt="Brand Logo" />
-                    <img className="gray" src="/assets/img/brand/brand_3_3.svg" alt="Brand Logo" />
-                  </a>
-                </div>
-              </div>
-              <div className="swiper-slide">
-                <div className="brand-card wow ">
-                  <a href="">
-                    <img className="original" src="/assets/img/brand/brand_3_4.svg" alt="Brand Logo" />
-                    <img className="gray" src="/assets/img/brand/brand_3_4.svg" alt="Brand Logo" />
-                  </a>
-                </div>
-              </div>
-              <div className="swiper-slide">
-                <div className="brand-card wow ">
-                  <a href="">
-                    <img className="original" src="/assets/img/brand/brand_3_5.svg" alt="Brand Logo" />
-                    <img className="gray" src="/assets/img/brand/brand_3_5.svg" alt="Brand Logo" />
-                  </a>
-                </div>
-              </div>
-              <div className="swiper-slide">
-                <div className="brand-card wow ">
-                  <a href="">
-                    <img className="original" src="/assets/img/brand/brand_3_1.svg" alt="Brand Logo" />
-                    <img className="gray" src="/assets/img/brand/brand_3_1.svg" alt="Brand Logo" />
-                  </a>
-                </div>
-              </div>
-              <div className="swiper-slide">
-                <div className="brand-card wow ">
-                  <a href="">
-                    <img className="original" src="/assets/img/brand/brand_3_2.svg" alt="Brand Logo" />
-                    <img className="gray" src="/assets/img/brand/brand_3_2.svg" alt="Brand Logo" />
-                  </a>
-                </div>
-              </div>
+          <div className="swiper th-slider brand-slider pt-5 mt-3" >
+            <div className="brand-card wow ">
+              <a>
+                <img className="original" src={Settings.logo_url2} alt="Brand Logo" />
+                <img className="gray" src={Settings.logo_url2} alt="Brand Logo" />
+              </a>
             </div>
-
           </div>
         </div>
       </div>
