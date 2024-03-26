@@ -7,10 +7,10 @@ import 'swiper/css/navigation';
 import 'swiper/css/autoplay';
 import { CardArticle } from '@/components/CardArticle';
 import { getRandomArticles } from '@/utils/supabase';
-import { Articles } from '@/utils/types';
+import { Articles as ArticlesType } from '@/utils/types';
 
 export function Articles() {
-  const [articles, setArticles] = useState<Articles[]>([]);
+  const [articles, setArticles] = useState<ArticlesType[]>([]);
   //const swiperRef = useRef(null);
   const swiperNavigate = useSwiper();
 

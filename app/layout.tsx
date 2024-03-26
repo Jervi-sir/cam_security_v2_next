@@ -49,14 +49,6 @@ export default function RootLayout({
             '.link',
             {
               target: '.cursor',
-              options: {
-                innerSize: 12,
-                outerSize: 12,
-                color: '255, 255, 255',
-                outerAlpha: 0.3,
-                innerScale: 0.7,
-                outerScale: 5,
-              }
             }
           ]}
         />
