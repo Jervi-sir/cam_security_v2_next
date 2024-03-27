@@ -1,4 +1,5 @@
 "use client"
+import { useCart } from '@/context/CartContext';
 import { Settings } from '@/utils/db';
 import React, { useState, useEffect, useRef } from 'react';
 
@@ -75,13 +76,14 @@ export function Header() {
 }
 
 const MenuNav = () => {
+  const { cart } = useCart();
   return (
     <ul>
       <li className="">
-        <a href="/">Home</a>
+        <a href="/">Accueil</a>
       </li>
       <li className="menu-item-has-children">
-        <a href="items">Products</a>
+        <a href="items">Nos Produits</a>
         <ul className="sub-menu">
           <li className=""> {/* menu-item-has-children */}
             <a href="/items?category=3">Cameras</a>
@@ -96,7 +98,7 @@ const MenuNav = () => {
             }
           </li>
           <li className="">
-            <a href="/items?category=2">Safe Box</a>
+            <a href="/items?category=2">Coffre Fort</a>
             {/*
           <ul className="sub-menu">
             <li><a href="career.html">Career</a></li>
@@ -110,25 +112,31 @@ const MenuNav = () => {
 
       </li>
       <li className="menu-item-has-children">
-        <a href="#">Service</a>
+        <a href="#">Nos Services</a>
         <ul className="sub-menu">
-          <li><a href="#">Service</a></li>
-          <li><a href="#">Service Details</a></li>
+          <li><a href="#">Installation</a></li>
+          <li><a href="#">Maintenance</a></li>
         </ul>
       </li>
-      <li className="menu-item-has-children">
+      <li className="menu-item-has-children" style={{position: 'relative'}}>
+        {
+          cart.length > 0
+          &&
+          <div style={{position: 'absolute', width: '20px', height: '20px', borderRadius: '100%', bottom: '-50%', zIndex:99, right: '40%',  background: '#3e66f3', textAlign: 'center' }}>
+            <span style={{ textAlign: 'center', color: 'white' }}>{ cart.length }</span>
+          </div>
+        }
         <a href="#">Cart</a>
         <ul className="sub-menu">
           <li><a href="/checkout">Wishlist</a></li>
-          <li><a href="/cart">Cart</a></li>
+          <li><a href="/cart">Panier ( { cart.length } )</a></li>
         </ul>
       </li>
       <li className="menu-item-has-children">
         <a href="#">Extra</a>
         <ul className="sub-menu">
-          <li><a href="/about">About Us</a></li>
-          <li><a href="/contact">Contact Us</a></li>
-          <li><a href="blog-grid.html">Book An appointment</a></li>
+          <li><a href="/about">À propos de nous</a></li>
+          <li><a href="/contact">Prenez rendez-vous</a></li>
         </ul>
       </li>
     </ul>

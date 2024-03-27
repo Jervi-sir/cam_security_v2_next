@@ -11,6 +11,7 @@ import { motion } from 'framer-motion';
 import { Services } from "./components/Services";
 import { CTA } from "./components/CTA";
 import { JoinUs } from "./components/JoinUs";
+import { CartProvider } from "@/context/CartContext";
 
 export default function Home() {
   return (

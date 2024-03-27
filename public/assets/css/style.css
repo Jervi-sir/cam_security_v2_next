@@ -5948,7 +5948,7 @@ ol.wp-block-rss {
 
 .th-header .menu-area {
   position: relative;
-  z-index: 2;
+  z-index: 999;
 }
 
 .header-absolute {

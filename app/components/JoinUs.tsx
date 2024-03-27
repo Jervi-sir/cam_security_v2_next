@@ -3,8 +3,10 @@ import { supabaseClient } from '@/utils/supabase'
 import './JoinUs.css'
 import { useState } from "react"
 import { Bars, Rings } from 'react-loading-icons'
-import animationData from '../../public/assets/lottiefiles/success.json'
+import animationData from '@/public/assets/lottiefiles/success.json'
 import Lottie from "react-lottie";
+import { Wilayas } from '@/utils/db'
+import { formatPhoneNumber } from '@/utils/helpers'
 
 export const JoinUs = () => {
   const animationURL = "https://assets3.lottiefiles.com/packages/lf20_JExdDIS87T.json";
@@ -35,11 +37,6 @@ export const JoinUs = () => {
   const [wilayaError, setWilayaError] = useState(false);
   const [fileError, setFileError] = useState(false);
 
-  const wilayas = [
-    "Adrar", "Chlef", "Laghouat", "Oum El Bouaghi", "Batna", "Béjaïa", "Biskra", "Béchar", "Blida", "Bouira", "Tamanrasset", "Tébessa", "Tlemcen", "Tiaret", "Tizi Ouzou", "Algiers", "Djelfa", "Jijel", "Sétif", "Saïda", "Skikda", "Sidi Bel Abbès", "Annaba", "Guelma", "Constantine", "Médéa", "Mostaganem", "M'Sila", "Mascara", "Ouargla", "Oran", "El Bayadh", "Illizi", "Bordj Bou Arréridj", "Boumerdès", "El Tarf", "Tindouf", "Tissemsilt", "El Oued", "Khenchela", "Souk Ahras", "Tipaza", "Mila", "Aïn Defla", "Naâma", "Aïn Témouchent", "Ghardaïa", "Relizane", "El M'Ghair", "El Menia", "Ouled Djellal", "Bordj Baji Mokhtar", "Beni Abbes", "Timimoun", "Touggourt", "Djanet", "In Salah", "In Guezzam"
-  ];
-
-
   const handleFileChange = (event) => {
     const file = event.target.files[0];
     setFile(file);
@@ -53,18 +50,6 @@ export const JoinUs = () => {
   const handleIncrease = () => setAge(age + 1);
   const handleDecrease = () => setAge(age > 18 ? age - 1 : 18);
 
-  const formatPhoneNumber = (value) => {
-    const numbers = value.replace(/[^\d]/g, '');
-    const phoneNumberMatch = numbers.match(/^(\d{0,4})(\d{0,2})(\d{0,2})(\d{0,2})$/);
-    const formattedNumber = phoneNumberMatch
-      ? `${phoneNumberMatch[1] ? '(' + phoneNumberMatch[1] : ''}${
-          phoneNumberMatch[2] ? ') ' + phoneNumberMatch[2] : ''
-        }${phoneNumberMatch[3] ? ' ' + phoneNumberMatch[3] : ''}${
-          phoneNumberMatch[4] ? ' ' + phoneNumberMatch[4] : ''
-        }`
-      : '';
-    return formattedNumber.trim();
-  };
   const handlePhoneChange = (event) => {
     if(event.target.value.length > 15 ) return ;
     const formattedNumber = formatPhoneNumber(event.target.value);
@@ -195,14 +180,13 @@ export const JoinUs = () => {
                 </div>
                 <div className="row">
                   <div className="form-group col-lg-4">
-                    <input value={fullName} onChange={(e) => {setFullName(e.target.value); setNameError(true)}} type="text" className="form-control" placeholder="Nom et Prénom*" required />
+                    <input value={fullName} onChange={(e) => {setFullName(e.target.value); setNameError(false)}} type="text" className="form-control" placeholder="Nom et Prénom*" required />
                     { nameError && <ErrorLine /> }
                   </div>
                   <div className="form-group col-lg-4">
                     <input
                       type="tel"
                       className="form-control"
-                      name="number"
                       placeholder="(0558) .. .. .."
                       value={phoneNumber}
                       onChange={e => {handlePhoneChange(e); setPhoneError(false)}}
@@ -217,7 +201,6 @@ export const JoinUs = () => {
                       <span >|</span>
                       <input
                         type="number"
-                        name="age"
                         style={{border: 'none', textAlign: 'center'}}
                         value={age}
                         onChange={e => setAge(Number(e.target.value))}
@@ -262,7 +245,7 @@ export const JoinUs = () => {
                   <div className="form-group col-lg-6">
                     <select onChange={e => {setWilaya(e.target.value); setWilayaError(false)}} className="form-control" required defaultValue={""}>
                       <option value="" disabled>Select Wilaya</option>
-                      {wilayas.map((wilaya, index) => (
+                      {Wilayas.map((wilaya, index) => (
                         <option key={index} value={wilaya}>{`${index + 1 < 10 ? '0' : ''}${index + 1} - ${wilaya}`}</option>
                       ))}
                     </select>

@@ -1,25 +1,33 @@
 export interface Products {
-  id: number,
-  title: string,
-  price: number,
-  quantity: number,
-  images: string[],
-  description: string,
-  characteristics: string,
-  brand_name: string,
-  category_name: string
+  id: number;
+  title: string;
+  price: number;
+  stock_quantity: number;
+  images: string[];
+  description: string;
+  characteristics: string[];
+  brand_name: string;
+  category_name: string;
+  maintenance_cost: number;
+  installation_cost: number;
 }
 
 export interface Product {
-  id: number,
-  title: string,
-  price: number,
-  quantity: number,
-  images: string[],
-  description: string,
-  characteristics: string[],
-  brand_name: string,
-  category_name: string
+  id: number;
+  title: string;
+  price: number;
+  stock_quantity: number;
+  images: string[];
+  description: string;
+  characteristics: string[];
+  brand_name: string;
+  category_name: string;
+  maintenance_cost: number;
+  installation_cost: number;
+}
+
+export interface CartItem extends Product {
+  amount: number;
 }
 
 export interface Articles {

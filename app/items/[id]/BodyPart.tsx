@@ -25,10 +25,10 @@ export const BodyPart = () => {
             onClick={() => handleTabClick('additional')}
             style={{cursor: 'pointer'}}
           >
-            Additional Information
+            Informations Complémentaires
           </a>
         </li>
-        <li className="nav-item" role="presentation">
+        <li className="nav-item" role="presentation" hidden>
           <a
             className={`nav-link ${activeTab === 'reviews' ? 'active' : ''}`}
             onClick={() => handleTabClick('reviews')}
@@ -69,7 +69,7 @@ export const BodyPart = () => {
             Interactively strategize parallel growth strategies without out-of-the-box web services. Assertively
             reinvent installed base.</p>
         </div>
-        <div className={`tab-pane fade ${activeTab === 'reviews' ? 'show active' : ''}`} id="reviews" role="tabpanel">
+        <div className={`tab-pane fade ${activeTab === 'reviews' ? 'show active' : ''}`} id="reviews" role="tabpanel" hidden >
           <div className="woocommerce-Reviews">
             <div className="th-comments-wrap ">
               <ul className="comment-list">
