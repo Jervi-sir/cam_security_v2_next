@@ -233,7 +233,7 @@ export const JoinUs = () => {
                   <h5 className="text-center mb-30">Je veux Rejoindre Une Formation</h5>
                   <div className="form-group col-lg-6">
                     <select onChange={e => {setYearsExperience(e.target.value); setyearsExperienceError(false)}} defaultValue={""} className="form-control" required>
-                      <option value="0">Select Years of Experience</option>
+                      <option value="0" disabled selected hidden>Select Years of Experience</option>
                       <option value="1">Less than 1 year</option>
                       <option value="2">1-2 years</option>
                       <option value="3">3-5 years</option>
@@ -244,7 +244,7 @@ export const JoinUs = () => {
                   </div>
                   <div className="form-group col-lg-6">
                     <select onChange={e => {setWilaya(e.target.value); setWilayaError(false)}} className="form-control" required defaultValue={""}>
-                      <option value="" disabled>Select Wilaya</option>
+                      <option value="" disabled selected hidden>Select Wilaya</option>
                       {Wilayas.map((wilaya, index) => (
                         <option key={index} value={wilaya}>{`${index + 1 < 10 ? '0' : ''}${index + 1} - ${wilaya}`}</option>
                       ))}

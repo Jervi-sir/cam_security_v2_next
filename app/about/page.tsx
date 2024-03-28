@@ -4,18 +4,23 @@ import { BlogSection } from "./BlogSection";
 import { CounterSection } from "./CounterSection";
 import { TestimonialSection } from "./TestimonialSection";
 import { VideoSection } from "./VideoSection";
+import { NoticeWrapper } from "@/components/NoticeWrapper";
 
 export default function About() {
   return (
     <>
-      <BreadcumbWrapper title="About Us" />
+    <div className="th-cart-wrapper  space-top space-extra-bottom">
+      <div className="container">
+        <NoticeWrapper title="About Us" />
 
-      <AboutSection />
-      <CounterSection />
-      <VideoSection />
-      
-      {/* <TestimonialSection /> */}
-      {/* <BlogSection /> */}
+        <AboutSection />
+        {/*<CounterSection />*/}
+        {/*<VideoSection />*/}
+        
+        {/* <TestimonialSection /> */}
+        {/* <BlogSection /> */}
+      </div>
+      </div>
     </>
   )
 }

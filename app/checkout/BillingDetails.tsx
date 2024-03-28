@@ -58,7 +58,7 @@ export const BillingDetails = () => {
             {/* Wilaya */}
             <div className="col-6 form-group">
               <select onChange={e => { setWilaya(e.target.value) }} className="form-select" value={wilaya} required defaultValue={""}>
-                <option value="" disabled>Select Wilaya</option>
+                <option value="" disabled selected hidden>Select Wilaya</option>
                 {Wilayas.map((wilaya, index) => (
                   <option key={index} value={wilaya}>{`${index + 1 < 10 ? '0' : ''}${index + 1} - ${wilaya}`}</option>
                 ))}

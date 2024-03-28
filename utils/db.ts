@@ -1,7 +1,7 @@
 export const Settings = {
-  site_name: 'WebTeck',
-  footer_logo_url: '/assets/img/logo-footer.svg',
-  logo_url2: '/assets/img/logo2.svg',
+  site_name: 'Dz Guard',
+  footer_logo_url: '/logo/svg/logo247_white.svg',
+  logo_url2: '/logo/svg/logo247_blue.svg',
   youtube_url: 'https://www.youtube.com/embed/ZAZQq7bsyao?si=Y2I-WGynNW9eKQwN',
   phone_number: '043123456',
   email: 'email@rmail.com',
