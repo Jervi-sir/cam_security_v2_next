@@ -11,17 +11,25 @@
   background: #3e65f320;
   backdrop-filter: blur(2px);
 }
-.estimation-overlay .estimation-close {
-  position: absolute;
+.estimation-overlay .estimation-top {
+  /*position: absolute;*/
   top: 5px;
   right: 10px;
-  border-radius: 100%;
+}
+.estimation-close {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.estimation-close .estimation-close-btn {
   width: 30px;
   height: 30px;
   background: #3e65f3;
+  border-radius: 100%;
 }
 .estimation {
-  height: 550px;
+  height: 560px;
   width: 500px;
   position: absolute;
   top: 50%;
@@ -30,14 +38,19 @@
   background: white;
   border-radius: 20px;
   padding: 20px;
+  padding-top: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 .estimation .title {
-  font-size: 20px;
+  font-size: 18px;
   text-align: center;
+  padding: 0;
+  margin: 0;
+  padding-top: 10px;
 }
+
 .action {
   width: 100%;
 }
@@ -137,6 +150,8 @@
   padding: 20px;
   height: 150px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
 }
 .estimation .option-border:hover {
   border: 2px solid #3e66f3;
@@ -193,15 +208,23 @@
 /*  ---- */
 
 @media (max-width: 400px) {
+  
   .estimation-container {
-    transform: scale(0.6);
+    /*transform: scale(0.6);*/
   }
+  
 }
 
 @media (max-width: 430px) {
+  .estimation {
+    width: 370px;
+  }
+  .estimation .col {
+    max-width: 10rem;
+  }
   .estimation-container {
     position: relative;
-    transform: scale(0.7);
+    /*transform: scale(0.7);*/
     top: 50%;
     left: 0;
     right: 0;

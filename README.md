@@ -10,6 +10,7 @@ https://www.youtube.com/watch?v=zPyACEvZvOA
 https://iconscout.com/illustrations/safe-box
 https://www.youtube.com/watch?v=-_bhH4MLq1Y
 
+https://quiz.simplisafe.com/kaedkhe4?L=Full+Page&uid=&deferred=true&wizardType=embedded&uid=d70b0331-62c9-4d8c-92fb-1934a57e3a4f
 
 ## Templates 
 
