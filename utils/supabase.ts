@@ -38,6 +38,17 @@ export const getThisProduct = async (item_id: number) => {
     }
 }
 
+export const getThisArticle = async (item_id: number) => {
+  const { data, error } = await supabaseClient
+    .rpc('get_this_article', { article_id: item_id });
+
+    if (error) {
+      console.error('query error:', error);
+    } else {
+      return (data[0]); // Your random results with joined data
+    }
+}
+
 export const getRelatedProducts = async (item_id: number, limit:number = 4) => {
   const { data, error } = await supabaseClient
     .rpc('get_related_products', {product_id: item_id, limit_count: limit})

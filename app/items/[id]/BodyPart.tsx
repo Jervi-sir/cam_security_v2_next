@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export const BodyPart = () => {
+export const BodyPart = ({ content }) => {
   const [activeTab, setActiveTab] = useState('description');
 
   const handleTabClick = (tab: string) => {
@@ -40,34 +40,10 @@ export const BodyPart = () => {
       </ul>
       <div className="tab-content" >
         <div className={`tab-pane fade ${activeTab === 'description' ? 'show active' : ''}`} id="description" role="tabpanel">
-          <p>Credibly negotiate emerging materials whereas clicks-and-mortar intellectual capital. Compellingly
-            whiteboard client-centric sources before cross-platform schemas. Distinctively develop future-proof
-            outsourcing without multimedia based portals. Progressively coordinate next-generation architectures
-            for collaborative solutions. Professionally restore backward-compatible quality vectors before
-            customer directed metrics. Holisticly restore technically sound internal or &quot;organic&quot; sources before
-            client-centered human capital underwhelm holistic mindshare for prospective innovation. Seamlessly
-            target fully tested infrastructures whereas just in time process improvements. Dynamically exploit
-            team driven functionalities vis a vis global total linkage redibly synthesize just in time
-            technology rather than open-source strategic theme areas.</p>
+          <div dangerouslySetInnerHTML={{ __html: content }} />
         </div>
         <div className={`tab-pane fade ${activeTab === 'additional' ? 'show active' : ''}`} id="additional" role="tabpanel">
-          <p>Conveniently build adaptive users with front-end human capital. Appropriately unleash team building
-            technology for goal-oriented paradigms. Dynamically generate interoperable e-business
-            vis-a-visgoal-oriented value. Completely pursue fully tested content whereas multifunctional core
-            competencies. Progressively scale team driven process improvements before premier functionalities.
-            Holisticly cultivate intermandated methodologies rather than virtual technology. Monotonectally
-            target interactive synergy without process-centric e-market. Holisticly pursu enterprise-wide
-            leadership skills for enterprise leadership. Collaboratively underwhelm standardized expertise after
-            effective bandwidth. Conveniently productivate holistic collaboration and idea-sharing rather than
-            granular strategic theme areas.
-
-            Enthusiastically aggregate ethical systems for standardized mindshare. Energistically target
-            resource maximizing leadership skills without backward-compatible action items. Credibly impact
-            alternative expertise vis-a-vis economically sound results. Dynamically synergize empowered benefits
-            through functional partnerships. Authoritatively empower prospective infomediaries for interactive
-            content. Synergistically embrace 2.0 paradigms through professional intellectual capital.
-            Interactively strategize parallel growth strategies without out-of-the-box web services. Assertively
-            reinvent installed base.</p>
+          <div dangerouslySetInnerHTML={{ __html: content }} />
         </div>
         <div className={`tab-pane fade ${activeTab === 'reviews' ? 'show active' : ''}`} id="reviews" role="tabpanel" hidden >
           <div className="woocommerce-Reviews">

@@ -114,8 +114,8 @@ const MenuNav = () => {
       <li className="menu-item-has-children">
         <a href="#">Nos Services</a>
         <ul className="sub-menu">
-          <li><a href="#">Installation</a></li>
-          <li><a href="#">Maintenance</a></li>
+          <li><a href="/services/installation">Installation</a></li>
+          <li><a href="/services/maintenance">Maintenance</a></li>
         </ul>
       </li>
       <li className="menu-item-has-children" style={{position: 'relative'}}>

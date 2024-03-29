@@ -11,7 +11,22 @@ import './addButton.css'
 import { useParams } from 'next/navigation'
 import { useCart } from "@/context/CartContext";
 
-const initialProductState: Product = { id: 0, title: '', price: 0, stock_quantity: 0, images: [], description: '', characteristics: [], brand_name: '', category_name: '', installation_cost: null, maintenance_cost: null};
+const initialProductState: Product = { 
+  id: 0, 
+  title: '', 
+  price: 0, 
+  price_old: null, 
+  promo_percentage: null, 
+  stock_quantity: 0, 
+  images: [], 
+  description: '', 
+  characteristics: [], 
+  brand_name: '', 
+  category_name: '', 
+  installation_cost: null, 
+  maintenance_cost: null, 
+  views: 0
+};
 
 export default function Item() {
   const { addToCart } = useCart();
@@ -62,11 +77,18 @@ export default function Item() {
                 <h2 className="product-title">{ product.title }</h2>
                 <div className="product-rating">
                   <div className="star-rating" role="img" aria-label="Rated 5.00 out of 5"><span style={{ width: '100%' }}>Rated <strong className="rating">5.00</strong> out of 5 based on <span className="rating">2</span>(2 customer reviews)</span></div>
-                  <a href="shop-details.html" className="woocommerce-review-link">(<span className="count">2 </span>
-                   Clients l&apos;ont choisi)</a>
+                  <a className="woocommerce-review-link">(<span className="count">{ product.views } </span>
+                   Clients l&apos;ont vu)</a>
                 </div>
-                <p className="price">${ product.price }<del>${ product.price + 15 }</del></p>
-                <p className="text mt-2">{product.description}</p>
+                <p className="price">
+                  { product.price } <small>DA</small>
+                  {
+                    product.price_old
+                    &&
+                    <small><del>{ product.price_old } DA</del></small>
+                  }
+                </p>
+
                 <div className="checklist style2">
                   <ul>
                     {
@@ -87,18 +109,18 @@ export default function Item() {
                     <button className="quantity-minus qty-btn" onClick={decreaseQtn}><i className="far fa-chevron-down"></i></button>
                   </div>
                   <button className={`th-btn ${adding ? 'style4' : ''}`} onClick={handleAddToCart}>
-                    {adding ? 'Added' : 'Add to Cart'}
+                    {adding ? 'Ajouté' : 'Ajouter au panier'}
                   </button>
                 </div>
                 <div className="product_meta">
                   <span className="sku_wrapper">SKU: <span className="sku">{ product.brand_name} </span></span>
-                  <span className="posted_in">Category: <a href="shop.html">{ product.category_name }</a></span>
+                  <span className="posted_in">Categorie: <a>{ product.category_name }</a></span>
                 </div>
               </div>
             </div>
           </div>
           
-          <BodyPart />
+          <BodyPart content={product.description} />
 
           <SuggestedProducts product_id={Number(id)} />
           
