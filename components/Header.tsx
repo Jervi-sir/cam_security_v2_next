@@ -62,7 +62,7 @@ export function Header() {
                 <div className="col-auto">
                   <div className="header-button">
                     <button type="button" className="th-menu-toggle d-block d-lg-none" onClick={() => setIsOpened(true)}><i className="far fa-bars"></i></button>
-                    <a href={`tel:${Settings.phone_number}`} className="th-btn">Call us: {' '}{Settings.phone_number}</a>
+                    <a href={`tel:${Settings.phone_number}`} className="th-btn">Appelez-Nous: {' '}{Settings.phone_number}</a>
                   </div>
                 </div>
               </div>
