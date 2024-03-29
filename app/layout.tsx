@@ -11,13 +11,14 @@ import "../public/assets/css/custom.css";
 import AnimatedCursor from "react-animated-cursor";
 import { CartProvider } from "@/context/CartContext";
 import { CheckoutProvider } from "@/context/CheckoutProvider";
+import { Settings } from "@/utils/db";
 
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Vigilens",
-  description: "Vigilens",
+  title: Settings.site_name,
+  description: Settings.description,
 };
 
 export default function RootLayout({
