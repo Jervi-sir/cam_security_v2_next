@@ -54,7 +54,7 @@ export function Header() {
                   </div>
                 </div>
                 <div className="col-auto">
-                  <nav className="main-menu style2 d-none d-lg-inline-block">
+                  <nav className="main-menu d-none d-lg-inline-block"> {/* style2 */}
                     <MenuNav />
                   </nav>
 

@@ -2,7 +2,7 @@ import { Settings } from "@/utils/db"
 
 export const Aside = () => {
   return (
-    <aside className="sidebar-area">
+    <aside className="sidebar-area" style={{position: 'sticky', top: '5rem'}}>
       <div className="widget widget_call  ">
         <div className="widget-call">
           <h4 className="box-title text-white">Besoin d'aide ?</h4>

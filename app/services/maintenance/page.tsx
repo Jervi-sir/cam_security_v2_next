@@ -70,7 +70,7 @@ export default function Maintenance() {
                 </div>
               </div>
             </div>
-            <div className="col-xxl-4 col-lg-4">
+            <div className="col-xxl-4 col-lg-4" style={{position: 'relative'}}>
               <Aside />
             </div>
           </div>
