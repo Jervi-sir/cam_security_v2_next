@@ -1,7 +1,7 @@
 'use client'
 import { useContext, useEffect, useState } from "react";
 import { useParams } from 'next/navigation'
-import { Article } from "@/utils/types";
+import { Article as ArticleType } from "@/utils/types";
 import { getThisArticle } from "@/utils/supabase";
 import { CommentSection } from "./CommentSection";
 import { SuggestedArticleSection } from "./SuggestedArticleSection";
@@ -11,13 +11,13 @@ import { Categories } from "./Categories";
 import { formateDate } from "@/utils/helpers";
 import { Settings } from "@/utils/db";
 
-const initialArticleState: Article = { id: 0, author_id: null, title: '', content: '', summary: '', published_date: null, last_modified_date: null, category: '', status: '', tags: [], images: [], views: 0 };
+const initialArticleState: ArticleType = { id: 0, author_id: null, title: '', content: '', summary: '', published_date: null, last_modified_date: null, category: '', status: '', tags: [], images: [], views: 0 };
 
 export default function Article() {
   const params = useParams();
   const { articleId } = params;
 
-  const [article, setArticle] = useState<Article>(initialArticleState);
+  const [article, setArticle] = useState<ArticleType>(initialArticleState);
 
   useEffect(() => {
     getThisArticle(Number(articleId)).then(e => setArticle(e));
@@ -51,7 +51,7 @@ export default function Article() {
                       <div className="tagcloud">
                         {
                           (article.tags).map((e, index) => (
-                            <a>{ e }</a>
+                            <a key={index}>{ e }</a>
                           ))
                         }
                       </div>

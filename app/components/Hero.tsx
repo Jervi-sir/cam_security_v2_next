@@ -18,7 +18,7 @@ export function Hero() {
                 <h2 className="hero-title"> La Sécurité ne doit pas être Compliquée<span className="title"></span></h2>
                 <p className="hero-text">Nos experts vous aidera à trouver les meilleures solutions</p>
                 <div className="btn-group  justify-content-center justify-content-lg-start">
-                  <a href="" className="th-btn style4">Voir les services</a>
+                  <a href="/services" className="th-btn style4">Voir les services</a>
                   <button className="th-btn" onClick={togglePopup} >Faire une Estimation</button>
                 </div>
               </div>

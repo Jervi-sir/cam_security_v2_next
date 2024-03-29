@@ -13,11 +13,11 @@ export default function Installation() {
                   <img src="/assets/illustrations/cctv_installation.svg" alt="Installation CCTV" />
                 </div>
                 <div className="page-content">
-                  <h4 className="sec-title page-title">Services d'installation de CCTV</h4>
+                  <h4 className="sec-title page-title">Services d&apos;installation de CCTV</h4>
                   <p className="mb-30">Le CCTV (télévision en circuit fermé) est un système de sécurité utilisant des caméras
-                    pour surveiller et enregistrer les activités dans des zones spécifiées. Nos services d'installation de CCTV assurent
+                    pour surveiller et enregistrer les activités dans des zones spécifiées. Nos services d&apos;installation de CCTV assurent
                     que votre propriété est protégée en fournissant un moyen de dissuasion visuel pour les intrus potentiels et
-                    en enregistrant toute activité suspecte. Voici un aperçu plus détaillé de nos services d'installation de CCTV :</p>
+                    en enregistrant toute activité suspecte. Voici un aperçu plus détaillé de nos services d&apos;installation de CCTV :</p>
                   <div className="features-wrapper">
                     <div className="features-img">
                       <img src="/assets/illustrations/cctv_garage.svg" alt="Fonctionnalités CCTV" />
@@ -40,9 +40,9 @@ export default function Installation() {
                     propriétés résidentielles et commerciales. Nous utilisons la dernière technologie pour vous fournir un
                     système facile à gérer, très efficace et évolutif selon vos besoins en matière de sécurité.</p>
 
-                  <h4 className="mb-20">Processus d'installation</h4>
+                  <h4 className="mb-20">Processus d&apos;installation</h4>
 
-                  <p className="mb-30">Notre processus d'installation de CCTV est minutieux pour assurer une couverture maximale et une sécurité
+                  <p className="mb-30">Notre processus d&apos;installation de CCTV est minutieux pour assurer une couverture maximale et une sécurité
                     optimale. Voici comment nous procédons :</p>
                   <div className="service-process-wrap">
                     <div className="service-process">
@@ -65,7 +65,7 @@ export default function Installation() {
                       <div className="service-process_num">03</div>
                       <div className="service-process_centent">
                         <h5 className="service-process_title">Installation :</h5>
-                        <p className="service-process_text">Installation professionnelle des caméras, du câblage et de l'équipement de surveillance
+                        <p className="service-process_text">Installation professionnelle des caméras, du câblage et de l&apos;équipement de surveillance
                           avec une perturbation minimale.</p>
                       </div>
                     </div>

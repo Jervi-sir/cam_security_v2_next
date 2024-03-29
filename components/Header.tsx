@@ -54,7 +54,7 @@ export function Header() {
                   </div>
                 </div>
                 <div className="col-auto">
-                  <nav className="main-menu d-none d-lg-inline-block"> {/* style2 */}
+                  <nav className="main-menu  d-none d-lg-inline-block"> {/* style2 */}
                     <MenuNav />
                   </nav>
 
@@ -83,7 +83,7 @@ const MenuNav = () => {
         <a href="/">Accueil</a>
       </li>
       <li className="menu-item-has-children">
-        <a href="items">Nos Produits</a>
+        <a href="/items">Nos Produits</a>
         <ul className="sub-menu">
           <li className=""> {/* menu-item-has-children */}
             <a href="/items?category=3">Cameras</a>
@@ -112,28 +112,29 @@ const MenuNav = () => {
 
       </li>
       <li className="menu-item-has-children">
-        <a href="#">Nos Services</a>
+        <a href="/services">Nos Services</a>
         <ul className="sub-menu">
           <li><a href="/services/installation">Installation</a></li>
           <li><a href="/services/maintenance">Maintenance</a></li>
+          <li><a href="/services/estimation">Estimation</a></li>
         </ul>
       </li>
       <li className="menu-item-has-children" style={{position: 'relative'}}>
         {
           cart.length > 0
           &&
-          <div style={{position: 'absolute', width: '20px', height: '20px', borderRadius: '100%', bottom: '-50%', zIndex:99, right: '40%',  background: '#3e66f3', textAlign: 'center' }}>
+          <div style={{position: 'absolute', width: '20px', height: '20px', borderRadius: '100%', bottom: '20%', zIndex:99, right: '40%',  background: '#3e66f3', textAlign: 'center' }}>
             <span style={{ textAlign: 'center', color: 'white' }}>{ cart.length }</span>
           </div>
         }
-        <a href="#">Cart</a>
+        <a >Cart</a>
         <ul className="sub-menu">
           <li><a href="/checkout">Wishlist</a></li>
           <li><a href="/cart">Panier ( { cart.length } )</a></li>
         </ul>
       </li>
       <li className="menu-item-has-children">
-        <a href="#">Extra</a>
+        <a >Extra</a>
         <ul className="sub-menu">
           <li><a href="/about">À propos de nous</a></li>
           <li><a href="/contact">Prenez rendez-vous</a></li>

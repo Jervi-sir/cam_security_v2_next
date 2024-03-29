@@ -67,7 +67,7 @@ const Content = () => {
               {property === 'Appartement' && <Step4AppartmentSection nextStep={nextStep} prevStep={prevStep} />}
               {property === 'Entreprise'  && (
                 <>
-                  { HowManyBusinesses === '1 - 4 locaux' && <Step4SmallBusinessCSection nextStep={nextStep} prevStep={prevStep} gotToStep={gotToStep} /> }
+                  { HowManyBusinesses === '1 - 4 locaux' && <Step4SmallBusinessCSection nextStep={nextStep} prevStep={prevStep} /> }
                   { HowManyBusinesses === '5+ locaux' && <Step4EntrepriseCSection nextStep={nextStep} prevStep={prevStep} /> }
                 </>
               ) }
@@ -137,7 +137,7 @@ const Step2Section = ({ nextStep, prevStep }) => {
   return (
     <>
       <div className="step step2" >
-        <h5 className="title">Super! Vous pourriez être admissible à économiser jusqu'à 15 % sur votre contrat d'assurance habitation.</h5>
+        <h5 className="title">Super! Vous pourriez être admissible à économiser jusqu&apos;à 15 % sur votre contrat d&apos;assurance habitation.</h5>
         <div className="options">
           <div className="col" >
             <div className="">
@@ -167,7 +167,7 @@ const Step3Section = ({ nextStep, prevStep }) => {
       <div className="step step3">
         <div>
           <h5 className="title">Nous avons deux options de configuration. Lequel préfères-tu?</h5>
-          <p className="w-75 text-center mx-auto">Quelle que soit l'option que vous choisissez, une assistance experte en direct par appel téléphonique est disponible pour garantir que votre système est correctement installé..</p>
+          <p className="w-75 text-center mx-auto">Quelle que soit l&apos;option que vous choisissez, une assistance experte en direct par appel téléphonique est disponible pour garantir que votre système est correctement installé..</p>
         </div>
         <div className="options">
           {
@@ -462,7 +462,7 @@ const Step4SmallBusinessCSection = ({ nextStep, prevStep }) => {
     <>
       <div className="step step3">
         <div>
-          <h5 className="title">Quel genre d'entreprise protégez-vous?</h5>
+          <h5 className="title">Quel genre d&apos;entreprise protégez-vous?</h5>
         </div>
         <div className="options" style={{display: 'flex', flexDirection:'column', flexWrap: 'unset', justifyContent: 'center', alignItems: 'center', padding: '0 18px', gap: '10px'}}>
           {

@@ -10,6 +10,7 @@ import './addButton.css'
 
 import { useParams } from 'next/navigation'
 import { useCart } from "@/context/CartContext";
+import { formatNumber } from "@/utils/helpers";
 
 const initialProductState: Product = { 
   id: 0, 
@@ -74,11 +75,11 @@ export default function Item() {
             </div>
             <div className="col-lg-6 align-self-center">
               <div className="product-about">
-                <h2 className="product-title">{ product.title }</h2>
+                <h2 className="product-title" style={{lineHeight: 'unset'}}>{ product.title }</h2>
                 <div className="product-rating">
                   <div className="star-rating" role="img" aria-label="Rated 5.00 out of 5"><span style={{ width: '100%' }}>Rated <strong className="rating">5.00</strong> out of 5 based on <span className="rating">2</span>(2 customer reviews)</span></div>
-                  <a className="woocommerce-review-link">(<span className="count">{ product.views } </span>
-                   Clients l&apos;ont vu)</a>
+                  <a className="woocommerce-review-link">(<span className="count">{ formatNumber(product.views) } </span>
+                   Clients ont vu ce Produit)</a>
                 </div>
                 <p className="price">
                   { product.price } <small>DA</small>

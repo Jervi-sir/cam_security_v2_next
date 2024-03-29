@@ -7,7 +7,7 @@ export const CardItem = ({ item }: { item: Products }) => {
 
   return (
     <>
-      <div style={{ marginLeft: '15px', marginRight: '15px' }}>
+      <div style={{ marginLeft: '15px', marginRight: '15px', overflow: 'hidden' }}>
         <a href={`/items/${item.id}`}>
         <div className="th-product">
           <div className="product-img" style={{
@@ -20,13 +20,23 @@ export const CardItem = ({ item }: { item: Products }) => {
             {/* <hover /> */}
           </div>
           <div className="product-content">
-            <span className="price">{item.price} DA<del>{item.price} DA</del></span>
-            <h3 className="product-title">{item.title}</h3>
-            <div className="woocommerce-product-rating">
-              <div className="star-rating" role="img" aria-label="Rated 5.00 out of 5">
-                <span>Rated <strong className="rating">5.00</strong> out of 5 based on <span className="rating">1</span> customer rating</span>
+            <span className="price">
+              { item.price } <small>DA</small>
+              {
+                item.price_old
+                &&
+                <small><del>{ item.price_old } DA</del></small>
+              }
+            </span>
+
+            <h3 className="product-title" style={{fontSize: '15px'}}>{item.title}</h3>
+            {/*
+              <div className="woocommerce-product-rating">
+                <div className="star-rating" role="img" aria-label="Rated 5.00 out of 5">
+                  <span>Rated <strong className="rating">5.00</strong> out of 5 based on <span className="rating">1</span> customer rating</span>
+                </div>
               </div>
-            </div>
+            */}
           </div>
         </div>
         </a>

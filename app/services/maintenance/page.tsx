@@ -41,14 +41,14 @@ export default function Maintenance() {
                       <div className="service-process_num">01</div>
                       <div className="service-process_centent">
                         <h5 className="service-process_title">Évaluation et inspection :</h5>
-                        <p className="service-process_text">Examen détaillé de l'ensemble du système pour identifier les problèmes potentiels.</p>
+                        <p className="service-process_text">Examen détaillé de l&apos;ensemble du système pour identifier les problèmes potentiels.</p>
                       </div>
                     </div>
                     <div className="service-process">
                       <div className="service-process_num">02</div>
                       <div className="service-process_centent">
                         <h5 className="service-process_title">Entretien préventif :</h5>
-                        <p className="service-process_text">Réalisations d'entretiens réguliers pour prévenir les défaillances et garantir le fonctionnement optimal.</p>
+                        <p className="service-process_text">Réalisations d&apos;entretiens réguliers pour prévenir les défaillances et garantir le fonctionnement optimal.</p>
                       </div>
                     </div>
                     <div className="service-process">
@@ -62,7 +62,7 @@ export default function Maintenance() {
                       <div className="service-process_num">04</div>
                       <div className="service-process_centent">
                         <h5 className="service-process_title">Rapport et conseils :</h5>
-                        <p className="service-process_text">Fourniture d'un rapport détaillé sur l'état du système et recommandations pour les améliorations futures.</p>
+                        <p className="service-process_text">Fourniture d&apos;un rapport détaillé sur l&apos;état du système et recommandations pour les améliorations futures.</p>
                       </div>
                     </div>
                   </div>

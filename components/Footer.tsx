@@ -22,7 +22,7 @@ export function Footer() {
                                         <a href="/">Home</a>
                                     </li>
                                     <li><a href="/items">Products</a></li>
-                                    <li><a href="service.html">Services</a></li>
+                                    <li><a href="/services">Services</a></li>
                                     <li><a href="/contact">Contact</a></li>
                                 </ul>
                                 <div className="th-social">
@@ -78,7 +78,7 @@ export function Footer() {
         </div>
         <div className="copyright-wrap text-center">
             <div className="container">
-                <p className="copyright-text">Copyright <i className="fal fa-copyright"></i> { new Date().getFullYear() } <a href="home-web-agency.html">{ Settings.site_name }</a>. All Rights Reserved.</p>
+                <p className="copyright-text">Copyright <i className="fal fa-copyright"></i> { new Date().getFullYear() } <a >{ Settings.site_name }</a>. All Rights Reserved.</p>
             </div>
         </div>
     </footer>

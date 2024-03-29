@@ -17,7 +17,7 @@ export const AboutSection = () => {
                 <div className="title-area mb-35">
                   <span className="sub-title">Découvrez notre expertise</span>
                   <h2 className="sec-title">Améliorez votre sécurité avec nos solutions expertes</h2>
-                  <p className="">Notre agence se spécialise dans l’installation professionnelle et la maintenance de systèmes de caméras de sécurité de haute qualité. Nous nous engageons à fournir des solutions de surveillance fiables et efficaces pour garantir votre sécurité et votre tranquillité d’esprit.</p>
+                  <p className="">Notre agence se spécialise dans l&apos;installation professionnelle et la maintenance de systèmes de caméras de sécurité de haute qualité. Nous nous engageons à fournir des solutions de surveillance fiables et efficaces pour garantir votre sécurité et votre tranquillité d’esprit.</p>
                 </div>
                 <div className="about-counter-wrapper">
                   <div className="checklist">
@@ -25,7 +25,7 @@ export const AboutSection = () => {
                       <li>Installation professionnelle de systèmes avancés</li>
                       <li>Maintenance régulière pour assurer une performance optimale</li>
                       <li>Estimation gratuite pour adapter les solutions à vos besoins</li>
-                      <li>Conseils d'experts pour renforcer la sécurité de votre propriété</li>
+                      <li>Conseils d&apos;experts pour renforcer la sécurité de votre propriété</li>
                     </ul>
                   </div>
                 </div>
