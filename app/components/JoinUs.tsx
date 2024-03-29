@@ -233,7 +233,7 @@ export const JoinUs = () => {
                   <h5 className="text-center mb-30">Je veux Rejoindre Une Formation</h5>
                   <div className="form-group col-lg-6">
                     <select onChange={e => {setYearsExperience(e.target.value); setyearsExperienceError(false)}} defaultValue={""} className="form-control" required>
-                      <option value="0" disabled selected hidden>Sélectionnez des années d'expérience</option>
+                      <option value="0" disabled selected hidden>Sélectionnez des années d&apos;expérience</option>
                       <option value="1">Moin de 1 year</option>
                       <option value="2">1-2 ans</option>
                       <option value="3">3-5 ans</option>
