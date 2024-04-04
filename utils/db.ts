@@ -2,7 +2,7 @@ export const Settings = {
   site_name: 'Dz Guard',
   footer_logo_url: '/logo/svg/logo_white.svg',
   logo_url2: '/logo/svg/logo_blue.svg',
-  youtube_url: 'https://www.youtube.com/embed/ZAZQq7bsyao?si=Y2I-WGynNW9eKQwN',
+  youtube_url: 'https://www.youtube.com/embed/fZy217ISezA?si=Gt4c5gVNeDZBCq9l',
   phone_number: '043123456',
   email: 'email@rmail.com',
   full_location: 'Ain Temouchent',
