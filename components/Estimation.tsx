@@ -44,16 +44,18 @@ const Content = () => {
       <div className="estimation-container">
         <div className="estimation">
           <div className='estimation-close'>
-            <span>Estimation: {totalEstimation} <small>DA</small> </span>
+            <span>Estimation: 
+              {/* {totalEstimation} <small>DA</small>  */}
+            </span>
             <button className='estimation-close-btn' onClick={togglePopup}></button>
           </div>
           {/* Step 1 */}
           {currentStep === 1 && <Step1Section nextStep={nextStep} />}
           {/* Step 2 */}
-          {currentStep === 2 && <Step2Section nextStep={nextStep} prevStep={prevStep} />}
+          {/* {currentStep === 2 && <Step2Section nextStep={nextStep} prevStep={prevStep} />} */}
 
           {/* Step 3 */}
-          {currentStep === 3 && (
+          {currentStep === 2 && (
             <>
               {property === 'Maison'      && <Step3Section nextStep={nextStep} prevStep={prevStep} />}
               {property === 'Appartement' && <Step3Section nextStep={nextStep} prevStep={prevStep} />}
@@ -61,7 +63,7 @@ const Content = () => {
             </>
           )}
           {/* Step 4 */}
-          {currentStep === 4 && (
+          {currentStep === 3 && (
             <>
               {property === 'Maison'      && <Step4Section nextStep={nextStep} prevStep={prevStep} />}
               {property === 'Appartement' && <Step4AppartmentSection nextStep={nextStep} prevStep={prevStep} />}
@@ -74,7 +76,7 @@ const Content = () => {
             </>
           )}
           {/* Step 5 */}
-          {currentStep === 5 && (
+          {currentStep === 4 && (
             <>
               {property === 'Maison' && <Step5Section nextStep={nextStep} prevStep={prevStep} />}
               {property === 'Appartement' && <Step5Section nextStep={nextStep} prevStep={prevStep} />}
@@ -87,10 +89,12 @@ const Content = () => {
             </>
           )}
           {/* Step 6 */}
-          {currentStep === 6 && <Step6Section nextStep={nextStep} prevStep={prevStep} />}
+          {/* {currentStep === 5 && <Step6Section nextStep={nextStep} prevStep={prevStep} />} */}
           {/* Step 7 */}
-          {currentStep === 7 && <Step7Section nextStep={nextStep} prevStep={prevStep} />}
+          {currentStep === 5 && <Step7Section nextStep={nextStep} prevStep={prevStep} />}
 
+          {/* Step 8 */}
+          {currentStep === 6 && <Step8Section exitEstimation={togglePopup} />}
 
         </div>
       </div>
@@ -519,5 +523,40 @@ const Step4EntrepriseCSection = ({ nextStep, prevStep }) => {
       
     </>
 
+  )
+}
+
+import successAnimation from '@/public/animation/success.json';
+import Lottie from 'react-lottie';
+
+const Step8Section = ({  exitEstimation  }) => {
+  const defaultOptions = {
+    loop: false,
+    autoplay: true,
+    animationData: successAnimation,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice'
+    }
+  };
+  return (
+    <>
+      <div className="step step7">
+        <div>
+          <h5 className="title my-0" style={{ color: 'green' }}>Votre demande de devis a été envoyée avec succès</h5>
+        </div>
+        
+        <div style={{flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center'}}>
+          <Lottie 
+            options={defaultOptions}
+            height={200}
+            width={200}
+          />
+        </div>
+      </div>
+
+      <div className='actions'>
+        <button className="th-btn action prev" style={{ background: 'transparent', color: 'gray' }} onClick={ exitEstimation }>Quitter l&apos;éstimation</button>
+      </div>
+    </>
   )
 }
